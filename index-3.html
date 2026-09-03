@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Burst Therapy — Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #0b0420;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Aurora glows */
+        body::before, body::after {
+            content: "";
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+        body::before {
+            width: 460px; height: 460px;
+            background: rgba(140, 51, 217, 0.45);
+            top: -120px; left: -100px;
+        }
+        body::after {
+            width: 420px; height: 420px;
+            background: rgba(51, 143, 245, 0.40);
+            bottom: -120px; right: -100px;
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            max-width: 560px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 0.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 48px 40px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .bubbles {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+        .bubble {
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .bubble::after {
+            content: "";
+            position: absolute;
+            top: 14%; left: 50%;
+            transform: translateX(-50%);
+            width: 36%; height: 22%;
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 50%;
+        }
+        .b1 { background: #9a3af0; }
+        .b2 { background: #1e90ff; }
+        .b3 { background: #d3357c; }
+        .b4 { background: #32d25a; }
+        .b5 { background: #ffa500; }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 32px 0 12px;
+            color: #ffffff;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.78);
+            margin-bottom: 12px;
+        }
+        a {
+            color: #b98cff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover { text-decoration: underline; }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 14px 32px;
+            background: #7f45de;
+            color: #ffffff;
+            border-radius: 26px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .contact-btn:hover { background: #8f55ee; text-decoration: none; }
+
+        .faq-q { font-weight: 600; color: #ffffff; margin-top: 18px; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.35);
+        }
+        .divider {
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.12);
+            margin: 32px 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <div class="bubbles">
+            <span class="bubble b1"></span>
+            <span class="bubble b2"></span>
+            <span class="bubble b3"></span>
+            <span class="bubble b4"></span>
+            <span class="bubble b5"></span>
+        </div>
+
+        <h1>Bubble Burst Therapy</h1>
+        <p class="subtitle">Support &amp; Help</p>
+
+        <p>
+            Thanks for playing Bubble Burst Therapy! We hope it brings a little
+            calm to your day. If you have a question, run into a problem, or just
+            want to share feedback, we'd love to hear from you.
+        </p>
+
+        <div style="text-align:center;">
+            <a class="contact-btn" href="mailto:taylorhaness822@gmail.com">Contact Support</a>
+        </div>
+
+        <hr class="divider">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <p class="faq-q">How do I switch between Calm Mode and Game Mode?</p>
+        <p>
+            Tap the toggle at the top of the screen. Calm Mode is a relaxing,
+            endless experience with no lives or pressure. Game Mode adds combos,
+            special bubbles, and an escalating challenge as you climb.
+        </p>
+
+        <p class="faq-q">Is my data collected?</p>
+        <p>
+            No. Bubble Burst Therapy does not collect, store, or share any personal
+            data. Everything happens right on your device.
+        </p>
+
+        <p class="faq-q">The haptics or sound aren't working — what should I do?</p>
+        <p>
+            Make sure your device isn't in silent mode and that system haptics are
+            enabled in Settings. If your device is in Low Power Mode, haptics may be
+            reduced. If the issue continues, reach out via the button above.
+        </p>
+
+        <p class="faq-q">Which languages are supported?</p>
+        <p>
+            Bubble Burst Therapy is available in English, Spanish, and French, and
+            automatically matches your device's language.
+        </p>
+
+        <hr class="divider">
+
+        <h2>Privacy</h2>
+        <p>
+            Bubble Burst Therapy collects no personal data whatsoever. There are no
+            accounts, no tracking, no analytics, and no ads. Your gameplay stays
+            entirely on your device.
+        </p>
+
+        <footer>
+            © 2026 Bubble Burst Therapy · All rights reserved
+        </footer>
+    </main>
+</body>
+</html>
